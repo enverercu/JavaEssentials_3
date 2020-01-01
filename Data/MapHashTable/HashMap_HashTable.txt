@@ -1,0 +1,49 @@
+Interface Map<K,V>
+An object that maps keys to values. A map cannot contain duplicate keys; each key can map to at most one value
+
+Class HashMap<K,V> - concrete class
+HashMap?() Constructs an empty HashMap with the default initial capacity (16) and the default load factor (0.75).
+The HashMap class is roughly equivalent to Hashtable, except that it is unsynchronized and permits nulls
+This implementation provides constant-time performance for the basic operations (get and put)
+An instance of HashMap has two parameters that affect its performance: initial capacity and load factor.
+The capacity is the number of buckets in the hash table, and the initial capacity is simply the capacity at the time the hash table is created
+The load factor is a measure of how full the hash table is allowed to get before its capacity is automatically increased
+As a general rule, the default load factor (.75) offers a good tradeoff between time and space costs
+Higher values decrease the space overhead but increase the lookup cost (reflected in most of the operations of the HashMap class, including get and put)
+Note that this implementation is not synchronized.
+If multiple threads access a hash map concurrently, and at least one of the threads modifies the map structurally, it must be synchronized externally
+Map m = Collections.synchronizedMap(new HashMap(...));
+
+Class LinkedHashMap<K,V>
+This implementation differs from HashMap in that it maintains a doubly-linked list running through all of its entries
+This linked list defines the iteration ordering, which is normally the order in which keys were inserted into the map (insertion-order)
+This technique is particularly useful if a module takes a map on input, copies it, and later returns results whose order is determined by that of the copy
+Clients generally appreciate having things returned in the same order they were presented
+This class provides all of the optional Map operations, and permits null elements. Like HashMap, 
+it provides constant-time performance for the basic operations (add, contains and remove), 
+assuming the hash function disperses elements properly among the buckets.
+Iteration over a HashMap is likely to be more expensive, requiring time proportional to its capacity.
+Note that this implementation is not synchronized. If multiple threads access a linked hash map concurrently, and at least one of the threads modifies the map structurally, it must be synchronized externally
+Map m = Collections.synchronizedMap(new LinkedHashMap(...));
+protected boolean	removeEldestEntry?(Map.Entry<K,V> eldest)
+caching ile recently used items a erisim hýzlanýr
+
+Hashtable, Hashmap farklarý
+Class Hashtable<K,V>
+Any non-null object can be used as a key or as a value
+Hashtable is synchronized
+
+Senkronizasyon gerekmiyorsa hashtable yerine hashmap kullan cunku senk.overhead ile birlikte gelir.
+yada 
+Class ConcurrentHashMap<K,V> kullan.
+java.util.concurrent
+ConcurrentHashMap:A hash table supporting full concurrency of retrievals and high expected concurrency for updates
+fazla item olduðu noktada bu çok iyi çalýþýr.
+Retrieval operations (including get) generally do not block, so may overlap with update operations (including put and remove)
+However, even though all operations are thread-safe, retrieval operations do not entail locking, and there is not any support for locking the entire table in a way that prevents all access
+Like Hashtable but unlike HashMap, this class does not allow null to be used as a key or value.
+ConcurrentHashMaps support a set of sequential and parallel bulk operations
+
+Ayný arraylist ve vector icin gecerlidir. senkronizasyon gerekmiyorsa arraylist kullanýlýr.
+
+

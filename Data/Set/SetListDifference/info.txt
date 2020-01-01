@@ -1,0 +1,1 @@
+A list can contain duplicate elements whereas Set contains unique elements only.

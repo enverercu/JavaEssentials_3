@@ -1,0 +1,9 @@
+Features of Java Hashmap
+a) The values can be stored in a map by forming a key-value pair. 
+The value can be retrieved using the key by passing it to the correct method.
+
+b) If no element exists in the Map, it will throw a ‘NoSuchElementException’.
+
+c) HashMap stores only object references. 
+That is why, it is impossible to use primitive data types like double or int. 
+Use wrapper class (like Integer or Double) instead.

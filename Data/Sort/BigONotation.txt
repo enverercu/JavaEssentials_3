@@ -1,0 +1,5 @@
+n: size of array
+O(n) : traverse array 2n times
+O(nlogn) : repeatedly divide half recursively
+O(n2) : number of loops, for example to for loops or while loops : WORST CASE
+ 

@@ -1,0 +1,9 @@
+What is the tradeoff between using an unordered array versus an ordered array?
+
+The major advantage of an ordered array is that the search times have time complexity of O(log n), 
+compared to that of an unordered array, which is O (n). 
+
+The disadvantage of an ordered array is that the insertion operation has a time complexity of O(n), 
+because the elements with higher values must be moved to make room for the new element. 
+Instead, the insertion operation for an unordered array takes constant time of O(1).
+

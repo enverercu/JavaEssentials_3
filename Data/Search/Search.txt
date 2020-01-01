@@ -1,0 +1,2 @@
+LinearSearch : O(n)
+BinarySearch : O(logn) --> keeps dividing the array in half

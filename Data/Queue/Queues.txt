@@ -1,0 +1,11 @@
+FIFO : First in first out
+Lineup : customers waiting serve from the starbucks in a line, first in first served
+add (enqueue) : add an item to the end of the queue
+remove (dequeue) : remove the item at the front of the queue
+peek : get the item at the front of the queue
+Abstract data type
+Not dictate how you store the data
+we wait other data structures to implement Queue 
+
+implement with array : add remove operations time complexity constant O(1) time, resizing : O(n) linear time complexity
+implement with linkedlist : add remove operations time complexity constant O(1) time, no need to resize

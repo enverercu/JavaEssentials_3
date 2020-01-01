@@ -1,0 +1,9 @@
+HashMap vs. TreeMap vs. HashTable vs. LinkedHashMap
+There are four commonly used implementations of Map in Java SE: HashMap, TreeMap, Hashtable, and LinkedHashMap. 
+
+HashMap is implemented as a hash table, and there is no ordering on keys or values.
+TreeMap is implemented based on red-black tree structure, and it is ordered by the key.
+LinkedHashMap same as HashMap and preserves the insertion order
+Hashtable  is synchronized in contrast to HashMap.
+
+This gives us the reason that HashMap should be used if it is thread-safe since Hashtable has overhead for synchronization. 

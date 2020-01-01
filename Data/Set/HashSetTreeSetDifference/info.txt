@@ -1,0 +1,5 @@
+A Set is a generic set of values with no duplicate elements. 
+
+A TreeSet is a set where the elements are sorted.
+
+A HashSet is a set where the elements are not sorted or ordered. It is faster than a TreeSet.

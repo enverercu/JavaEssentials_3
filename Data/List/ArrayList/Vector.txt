@@ -1,0 +1,18 @@
+ArrayList Vs Vector:
+1) Synchronization: ArrayList is non-synchronized which means multiple threads 
+can work on ArrayList at the same time. For e.g. if one thread is performing an add operation 
+on ArrayList, there can be an another thread performing remove operation on ArrayList 
+at the same time in a multithreaded environment
+
+while Vector is synchronized. This means if one thread is working on Vector, no other thread can get a hold of it.
+Unlike ArrayList, only one thread can perform an operation on vector at a time.
+
+
+3) Performance: ArrayList gives better performance as it is non-synchronized. 
+Vector operations gives poor performance as they are thread-safe, 
+the thread which works on Vector gets a lock on it which makes other thread wait till the lock is released.
+
+
+Therefore Vector should be avoided. If there is a need of thread-safe operation 
+make ArrayList synchronized as discussed in 
+the next section of this post or use CopyOnWriteArrayList which is a thread-safe variant of ArrayList

@@ -1,0 +1,7 @@
+LIFO : Last in first out
+push : add an item to the top of the stack
+pull : remove an item from the top of the stack
+peek : get an item from the top but dont delete it
+Abstract data type
+Not dictate how you store the data
+we wait other data structures to implement Stack (like array or linkedlist)
